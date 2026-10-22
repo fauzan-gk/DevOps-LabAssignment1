@@ -1,0 +1,150 @@
+
+/* General page styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f4f6fb;
+    color: #243047;
+}
+
+/* Navigation bar */
+.navbar {
+    background: #111827;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #a78bfa;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #312e81, #7c3aed);
+    color: white;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 28px;
+}
+
+.btn {
+    display: inline-block;
+    background: white;
+    color: #5b21b6;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #ede9fe;
+}
+
+/* About section */
+.about {
+    max-width: 900px;
+    margin: auto;
+    padding: 65px 20px;
+    text-align: center;
+}
+
+.about h2,
+.features h2 {
+    margin-bottom: 20px;
+    color: #312e81;
+}
+
+/* Feature cards */
+.features {
+    padding: 55px 8%;
+    text-align: center;
+    background: white;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.card {
+    background: #f4f6fb;
+    padding: 30px 20px;
+    border-radius: 12px;
+    border: 1px solid #e0e4ef;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #6d28d9;
+    margin-bottom: 12px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 22px;
+    background: #111827;
+    color: white;
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 70px 20px;
+    }
+}
